@@ -926,6 +926,110 @@
 
 
 
+
+	<!-- import React, { useRef, useState } from "react";
+	import emailjs from "@emailjs/browser";
+	import { Dialog } from "primereact/dialog";
+	import { Button } from "primereact/button";
+	
+	const Notification = () => {
+	  const [messageDialog, setMessageDialog] = useState(false);
+	
+	
+	  const hideDialog = () => {
+		setMessageDialog(false);
+	  };
+	  const openNew = () => {
+		setMessageDialog(true);
+	  };
+	
+	  const form = useRef();
+	  const sendEmail = (e) => {
+		e.preventDefault();
+	
+		emailjs
+		  .sendForm(
+			"service_pb4ku0q",
+			"SendtoStaff",
+			form.current,
+			"RLoPzgoUoh-2ehpMX"
+		  )
+		  .then(
+			(result) => {
+			  console.log(result.text);
+			  console.log("message sent!");
+			},
+			(error) => {
+			  console.log(error.text);
+			  console.log("error sending message, try again!");
+			}
+		  );
+	  };
+	  return (
+		<>
+		  <Button
+			label="Send Notification Message"
+			icon="pi pi-plus"
+			severity="success"
+			onClick={openNew}
+		  />
+	
+		  <Dialog
+			visible={messageDialog}
+			style={{ width: "32rem"}}
+			breakpoints={{ "960px": "75vw", "641px": "90vw" }}
+			header="Please Send New Notification Message."
+			modal
+			className="p-fluid"
+			onHide={hideDialog}
+		  >
+			<form ref={form} onSubmit={sendEmail}>
+			  <div className="field form-group">
+				<input
+				  name="to_name"
+				  type="name"
+				  placeholder="Name"
+				  required
+				/>
+				<input
+				  name="to_email"
+				  type="email"
+				  placeholder="Email"
+				  required
+				/>
+				<textarea
+				  name="appointment_message"
+				  placeholder="Write message..."
+				  required
+				></textarea>
+			  </div>
+			  <div className="form-group yseNo">
+				<Button
+				  label="Cancel"
+				  icon="pi pi-times"
+				  outlined
+				  onClick={hideDialog}
+				  className="decide"
+				/>
+				<Button
+				  type="submit"
+				  label="Send Message"
+				  icon="pi pi-check"
+				  className="decide"
+				/>
+			  </div>
+			</form>
+		  </Dialog>
+		</>
+	  );
+	};
+	
+	export default Notification; -->
+	
+
+
+
+
 	<!-- loader -->
 	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
 			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
